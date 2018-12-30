@@ -14,6 +14,7 @@
 		1412F7DC21D8C33D00CB8C54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1412F7DA21D8C33D00CB8C54 /* LaunchScreen.storyboard */; };
 		1412F7E421D8C5D300CB8C54 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1412F7E321D8C5D300CB8C54 /* HeaderView.swift */; };
 		1412F7E621D8CA8600CB8C54 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1412F7E521D8CA8500CB8C54 /* UIView+Extension.swift */; };
+		1412F7E921D8CE3E00CB8C54 /* StretchyHeaderLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1412F7E821D8CE3E00CB8C54 /* StretchyHeaderLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		1412F7DD21D8C33D00CB8C54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1412F7E321D8C5D300CB8C54 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		1412F7E521D8CA8500CB8C54 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		1412F7E821D8CE3E00CB8C54 /* StretchyHeaderLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchyHeaderLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +60,33 @@
 		1412F7D021D8C33100CB8C54 /* StretchyHeaderCollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				1412F7D121D8C33100CB8C54 /* AppDelegate.swift */,
 				1412F7D321D8C33100CB8C54 /* StetchyHeaderControllerController.swift */,
 				1412F7E321D8C5D300CB8C54 /* HeaderView.swift */,
-				1412F7E521D8CA8500CB8C54 /* UIView+Extension.swift */,
+				1412F7E721D8CE0C00CB8C54 /* CustomLayout */,
+				1412F7EA21D8CE4800CB8C54 /* Helper */,
+				1412F7D121D8C33100CB8C54 /* AppDelegate.swift */,
 				1412F7D521D8C33100CB8C54 /* Main.storyboard */,
 				1412F7D821D8C33D00CB8C54 /* Assets.xcassets */,
 				1412F7DA21D8C33D00CB8C54 /* LaunchScreen.storyboard */,
 				1412F7DD21D8C33D00CB8C54 /* Info.plist */,
 			);
 			path = StretchyHeaderCollectionView;
+			sourceTree = "<group>";
+		};
+		1412F7E721D8CE0C00CB8C54 /* CustomLayout */ = {
+			isa = PBXGroup;
+			children = (
+				1412F7E821D8CE3E00CB8C54 /* StretchyHeaderLayout.swift */,
+			);
+			path = CustomLayout;
+			sourceTree = "<group>";
+		};
+		1412F7EA21D8CE4800CB8C54 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				1412F7E521D8CA8500CB8C54 /* UIView+Extension.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +163,7 @@
 				1412F7D421D8C33100CB8C54 /* StetchyHeaderControllerController.swift in Sources */,
 				1412F7E421D8C5D300CB8C54 /* HeaderView.swift in Sources */,
 				1412F7E621D8CA8600CB8C54 /* UIView+Extension.swift in Sources */,
+				1412F7E921D8CE3E00CB8C54 /* StretchyHeaderLayout.swift in Sources */,
 				1412F7D221D8C33100CB8C54 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

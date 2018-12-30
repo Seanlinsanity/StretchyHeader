@@ -26,14 +26,13 @@ class StetchyHeaderController: UICollectionViewController, UICollectionViewDeleg
     
     fileprivate func setupCollectionView() {
         collectionView.backgroundColor = .white
+        collectionView.contentInsetAdjustmentBehavior = .never
         
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
         collectionView.register(HeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerId)
     }
     
     fileprivate func setupCollectionViewLayout() {
-        collectionView.contentInsetAdjustmentBehavior = .never
-
         if let layout = collectionViewLayout as? UICollectionViewFlowLayout {
             layout.sectionInset = .init(top: padding, left: padding, bottom: padding, right: padding)
         }
