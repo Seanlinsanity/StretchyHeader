@@ -19,8 +19,24 @@ class HeaderView: UICollectionReusableView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
         addSubview(imageView)
         imageView.fillSuperview()
+    
+        setupVisualEffectBlur()
+    }
+    
+    var animator: UIViewPropertyAnimator!
+    
+    private func setupVisualEffectBlur(){
+        animator = UIViewPropertyAnimator(duration: 3, curve: .linear, animations: { [weak self] in
+            let blurEffect = UIBlurEffect(style: .regular)
+            let visualEffectView = UIVisualEffectView(effect: blurEffect)
+            
+            self?.addSubview(visualEffectView)
+            visualEffectView.fillSuperview()
+        })
+                
     }
     
     required init?(coder aDecoder: NSCoder) {

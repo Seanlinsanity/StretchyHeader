@@ -24,6 +24,18 @@ class StetchyHeaderController: UICollectionViewController, UICollectionViewDeleg
         setupCollectionView()
     }
     
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        guard let indexPaths = self.collectionView?.indexPathsForVisibleSupplementaryElements(ofKind: UICollectionView.elementKindSectionHeader) else { return }
+        let headerView = collectionView.supplementaryView(forElementKind: UICollectionView.elementKindSectionHeader, at: indexPaths[0]) as? HeaderView
+        let contentOffsetY = scrollView.contentOffset.y
+        if contentOffsetY > 0 {
+            headerView?.animator.fractionComplete = 0
+            return
+        }
+        headerView?.animator.fractionComplete = abs(contentOffsetY) / 200
+        
+    }
+    
     fileprivate func setupCollectionView() {
         collectionView.backgroundColor = .white
         collectionView.contentInsetAdjustmentBehavior = .never
